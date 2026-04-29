@@ -6,7 +6,7 @@
   "author": "Asyar",
   "type": "theme",
   "icon": "icon:palette",
-  "asyarSdk": "^2.3.0",
+  "asyarSdk": "^2.4.0",
   "platforms": [
     "macos",
     "linux",
