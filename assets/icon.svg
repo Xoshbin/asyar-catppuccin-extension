@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+  <defs>
+    <!-- Background Gradient: Catppuccin Mocha Crust to Base -->
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#313244"/>
+      <stop offset="40%" stop-color="#1E1E2E"/>
+      <stop offset="85%" stop-color="#181825"/>
+      <stop offset="100%" stop-color="#11111B"/>
+    </linearGradient>
+
+    <!-- Top Ambient Sheen -->
+    <radialGradient id="topSheen" cx="50%" cy="12%" r="65%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- 1px Specular Bevel with Catppuccin Mauve tint -->
+    <linearGradient id="specularRim" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#CBA6F7" stop-opacity="0.5"/>
+      <stop offset="40%" stop-color="#FFFFFF" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0.03"/>
+    </linearGradient>
+
+    <!-- Hero Drop Shadow -->
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="14" stdDeviation="16" flood-color="#000000" flood-opacity="0.75"/>
+    </filter>
+
+    <!-- Specular highlight for paint dollops -->
+    <radialGradient id="paintHighlight" cx="35%" cy="30%" r="65%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.45"/>
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Base Squircle -->
+  <rect x="32" y="32" width="448" height="448" rx="104" fill="url(#bg)"/>
+  <rect x="32" y="32" width="448" height="448" rx="104" fill="url(#topSheen)"/>
+  <rect x="33" y="33" width="446" height="446" rx="103" fill="none" stroke="url(#specularRim)" stroke-width="2"/>
+
+  <g filter="url(#shadow)">
+    <!-- Modern Porcelain Artist Palette (Crisp White with subtle warm tone) -->
+    <path d="M 256, 140
+             C 336, 140 380, 184 380, 256
+             C 380, 320 336, 372 270, 372
+             C 240, 372 225, 350 205, 350
+             C 185, 350 170, 372 140, 372
+             C 74, 372 132, 220 180, 160
+             C 205, 140 230, 140 256, 140 Z"
+          fill="#CDD6F4"/>
+
+    <!-- Palette Thumb Grip Hole -->
+    <ellipse cx="205" cy="305" rx="20" ry="26" fill="#1E1E2E" transform="rotate(-15 205 305)"/>
+
+    <!-- Catppuccin Mocha Signature Pastel Color Dollops -->
+    <!-- 1. Mauve (#cba6f7) -->
+    <circle cx="256" cy="182" r="24" fill="#CBA6F7"/>
+    <circle cx="256" cy="182" r="24" fill="url(#paintHighlight)"/>
+
+    <!-- 2. Pink (#f5c2e7) -->
+    <circle cx="316" cy="208" r="22" fill="#F5C2E7"/>
+    <circle cx="316" cy="208" r="22" fill="url(#paintHighlight)"/>
+
+    <!-- 3. Sapphire / Sky (#74c7ec) -->
+    <circle cx="338" cy="268" r="22" fill="#74C7EC"/>
+    <circle cx="338" cy="268" r="22" fill="url(#paintHighlight)"/>
+
+    <!-- 4. Green (#a6e3a1) -->
+    <circle cx="308" cy="324" r="20" fill="#A6E3A1"/>
+    <circle cx="308" cy="324" r="20" fill="url(#paintHighlight)"/>
+
+    <!-- 5. Peach (#fab387) -->
+    <circle cx="200" cy="192" r="20" fill="#FAB387"/>
+    <circle cx="200" cy="192" r="20" fill="url(#paintHighlight)"/>
+
+    <!-- Fine Artist Brush dipped in Mauve resting on palette -->
+    <g transform="translate(256, 260) rotate(35) translate(-256, -260)">
+      <!-- Brush Handle -->
+      <polygon points="252,90 260,90 258,260 254,260" fill="#45475A"/>
+      <!-- Ferrule (Silver collar) -->
+      <rect x="251" y="260" width="10" height="24" rx="2" fill="#BAC2DE"/>
+      <!-- Bristles -->
+      <path d="M 251, 284 C 251, 298 256, 314 256, 314 C 256, 314 261, 298 261, 284 Z" fill="#CBA6F7"/>
+    </g>
+  </g>
+</svg>
