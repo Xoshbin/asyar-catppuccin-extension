@@ -1,86 +1,91 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="32 32 448 448">
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
   <defs>
-    <!-- Background Gradient: Catppuccin Mocha Crust to Base -->
-    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#313244"/>
-      <stop offset="40%" stop-color="#1E1E2E"/>
-      <stop offset="85%" stop-color="#181825"/>
-      <stop offset="100%" stop-color="#11111B"/>
-    </linearGradient>
-
-    <!-- Top Ambient Sheen -->
-    <radialGradient id="topSheen" cx="50%" cy="12%" r="65%">
-      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.2"/>
-      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0"/>
-    </radialGradient>
-
-    <!-- 1px Specular Bevel with Catppuccin Mauve tint -->
-    <linearGradient id="specularRim" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#CBA6F7" stop-opacity="0.5"/>
-      <stop offset="40%" stop-color="#FFFFFF" stop-opacity="0.12"/>
-      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0.03"/>
-    </linearGradient>
-
-    <!-- Hero Drop Shadow -->
-    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
-      <feDropShadow dx="0" dy="14" stdDeviation="16" flood-color="#000000" flood-opacity="0.75"/>
-    </filter>
-
-    <!-- Specular highlight for paint dollops -->
-    <radialGradient id="paintHighlight" cx="35%" cy="30%" r="65%">
-      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.45"/>
-      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0"/>
-    </radialGradient>
+    <clipPath id="squircleClip">
+      <rect x="0" y="0" width="512" height="512" rx="104" ry="104" />
+    </clipPath>
   </defs>
 
-  <!-- Base Squircle -->
-  <rect x="32" y="32" width="448" height="448" rx="104" fill="url(#bg)"/>
-  <rect x="32" y="32" width="448" height="448" rx="104" fill="url(#topSheen)"/>
-  <rect x="33" y="33" width="446" height="446" rx="103" fill="none" stroke="url(#specularRim)" stroke-width="2"/>
+  <g clip-path="url(#squircleClip)">
+    <!-- Official Catppuccin 6-stripe diagonal pastel background -->
+    <polygon points="0,0 245,0 0,245" fill="#ed8796" />
+    <polygon points="245,0 385,0 0,385 0,245" fill="#f5a97f" />
+    <polygon points="385,0 512,0 512,13 13,512 0,512 0,385" fill="#eed49f" />
+    <polygon points="512,13 512,145 145,512 13,512" fill="#a6da95" />
+    <polygon points="512,145 512,277 277,512 145,512" fill="#7dc4e4" />
+    <polygon points="512,277 512,512 277,512" fill="#c6a0f6" />
 
-  <g filter="url(#shadow)">
-    <!-- Modern Porcelain Artist Palette (Crisp White with subtle warm tone) -->
-    <path d="M 256, 140
-             C 336, 140 380, 184 380, 256
-             C 380, 320 336, 372 270, 372
-             C 240, 372 225, 350 205, 350
-             C 185, 350 170, 372 140, 372
-             C 74, 372 132, 220 180, 160
-             C 205, 140 230, 140 256, 140 Z"
-          fill="#CDD6F4"/>
+    <!-- Catppuccin Cat Silhouette -->
+    <path
+      d="M 122,512
+         C 120,468 124,420 128,398
+         C 78,364 52,312 60,248
+         C 64,218 74,190 85,172
+         C 76,132 76,92 84,74
+         C 92,66 140,74 176,112
+         C 218,98 272,96 312,110
+         C 344,72 384,56 394,66
+         C 410,82 414,132 406,174
+         C 438,202 458,242 456,288
+         C 454,348 424,394 374,420
+         C 380,450 384,484 385,512 Z"
+      fill="#24273a"
+    />
 
-    <!-- Palette Thumb Grip Hole -->
-    <ellipse cx="205" cy="305" rx="20" ry="26" fill="#1E1E2E" transform="rotate(-15 205 305)"/>
+    <!-- Smiling Eyes -->
+    <path
+      d="M 182,232
+         C 192,188 256,184 272,226
+         C 276,236 266,240 258,230
+         C 242,210 206,212 192,234
+         C 186,242 180,240 182,232 Z"
+      fill="#cad3f5"
+    />
+    <path
+      d="M 316,222
+         C 324,180 384,180 394,222
+         C 396,230 388,232 382,224
+         C 370,206 338,206 326,226
+         C 320,234 314,230 316,222 Z"
+      fill="#cad3f5"
+    />
 
-    <!-- Catppuccin Mocha Signature Pastel Color Dollops -->
-    <!-- 1. Mauve (#cba6f7) -->
-    <circle cx="256" cy="182" r="24" fill="#CBA6F7"/>
-    <circle cx="256" cy="182" r="24" fill="url(#paintHighlight)"/>
+    <!-- Nose -->
+    <path
+      d="M 288,256
+         C 304,254 326,254 332,260
+         C 336,266 322,282 312,284
+         C 302,284 284,270 284,262
+         C 284,258 286,256 288,256 Z"
+      fill="#cad3f5"
+    />
 
-    <!-- 2. Pink (#f5c2e7) -->
-    <circle cx="316" cy="208" r="22" fill="#F5C2E7"/>
-    <circle cx="316" cy="208" r="22" fill="url(#paintHighlight)"/>
+    <!-- Mouth (:3) -->
+    <path
+      d="M 272,302
+         C 268,302 268,308 272,312
+         C 282,324 304,328 318,312
+         C 332,324 348,318 352,294
+         C 354,288 348,286 344,292
+         C 338,304 326,306 318,298
+         C 314,294 310,296 308,300
+         C 302,312 286,312 278,304
+         C 276,302 274,302 272,302 Z"
+      fill="#cad3f5"
+    />
 
-    <!-- 3. Sapphire / Sky (#74c7ec) -->
-    <circle cx="338" cy="268" r="22" fill="#74C7EC"/>
-    <circle cx="338" cy="268" r="22" fill="url(#paintHighlight)"/>
-
-    <!-- 4. Green (#a6e3a1) -->
-    <circle cx="308" cy="324" r="20" fill="#A6E3A1"/>
-    <circle cx="308" cy="324" r="20" fill="url(#paintHighlight)"/>
-
-    <!-- 5. Peach (#fab387) -->
-    <circle cx="200" cy="192" r="20" fill="#FAB387"/>
-    <circle cx="200" cy="192" r="20" fill="url(#paintHighlight)"/>
-
-    <!-- Fine Artist Brush dipped in Mauve resting on palette -->
-    <g transform="translate(256, 260) rotate(35) translate(-256, -260)">
-      <!-- Brush Handle -->
-      <polygon points="252,90 260,90 258,260 254,260" fill="#45475A"/>
-      <!-- Ferrule (Silver collar) -->
-      <rect x="251" y="260" width="10" height="24" rx="2" fill="#BAC2DE"/>
-      <!-- Bristles -->
-      <path d="M 251, 284 C 251, 298 256, 314 256, 314 C 256, 314 261, 298 261, 284 Z" fill="#CBA6F7"/>
-    </g>
+    <!-- Bowtie -->
+    <path
+      d="M 268,426
+         C 264,424 260,432 260,446
+         C 260,462 266,474 274,474
+         C 286,472 296,464 302,458
+         C 306,462 312,462 316,456
+         C 324,462 334,468 342,464
+         C 348,460 348,442 344,428
+         C 340,420 332,422 316,436
+         C 312,434 306,434 302,438
+         C 290,430 274,426 268,426 Z"
+      fill="#ed8796"
+    />
   </g>
 </svg>
