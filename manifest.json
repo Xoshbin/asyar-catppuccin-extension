@@ -11,5 +11,6 @@
     "macos",
     "linux",
     "windows"
-  ]
+  ],
+  "category": "theme"
 }
