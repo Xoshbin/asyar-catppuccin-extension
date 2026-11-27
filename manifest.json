@@ -1,16 +1,14 @@
 {
   "id": "org.asyar.catppuccin",
   "name": "Catppuccin",
-  "version": "1.2.2",
-  "description": "Catppuccin Mocha theme for Asyar — soothing pastel colors for the night owl.",
+  "version": "1.3.0",
+  "description": "Catppuccin theme pack for Asyar — soothing pastel colors in Mocha, Macchiato, Frappé, and Latte.",
   "author": "Asyar",
   "type": "theme",
   "icon": "assets/icon.png",
   "asyarSdk": "^4.17.0",
-  "platforms": [
-    "macos",
-    "linux",
-    "windows"
-  ],
-  "category": "theme"
+  "minAppVersion": "0.1.2-5",
+  "platforms": ["macos", "linux", "windows"],
+  "category": "theme",
+  "commands": []
 }
